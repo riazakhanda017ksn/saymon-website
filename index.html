@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Saymon Web APP</title>
+    <style>
+      ul.navbar-nav.me-auto.mb-2.mb-lg-0 {
+        margin-left: auto;
+      }
+      body {
+        font-family: "Montserrat", sans-serif !important;
+      }
+      .navbar-light .navbar-nav .nav-link {
+        color: rgb(255 255 255);
+      }
+      .navbar-light .navbar-nav .nav-link.active,
+      .navbar-light .navbar-nav .show > .nav-link {
+        color: rgb(255 252 252 / 90%);
+      }
+      ul.navbar-nav.me-auto.mb-2.mb-lg-0 li a:hover {
+        text-decoration: underline !important;
+        color: #fff;
+      }
+      form.d-flex button {
+        padding: 7px 30px;
+        background: none;
+        border: 2px solid white !important;
+        color: #fff;
+      }
+      .navbar-light .navbar-brand {
+        color: rgb(255 255 255 / 90%);
+        font-family: cursive;
+      }
+      nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+        background: none !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99 !important;
+        color: #fff !important;
+      }
+      form.d-flex button {
+        padding: 7px 30px;
+        background: none;
+        border: 2px solid black;
+      }
+      .first {
+        background: url("https://scontent.fdac13-1.fna.fbcdn.net/v/t1.15752-9/325502908_842603930378155_6350079172072717945_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHvZdOGBs5UQhq1Kiz49M_XJqFqknZTW7EmoWqSdlNbschGlJUztPehuVYXxMCcf7iwtcHaOnJ45QskPqabSmt9&_nc_ohc=tslTz_y4WlUAX_jp6a3&_nc_ht=scontent.fdac13-1.fna&oh=03_AdTepyumfnhSn983xmxyHA3ddm0FnKkNBdOAG2_C9a81Dw&oe=63EE394A")
+          no-repeat center center;
+        background-size: cover;
+        height: 100vh;
+        position: relative;
+      }
+      .first::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.745);
+      }
+      .second {
+        background: url("https://scontent.fdac13-1.fna.fbcdn.net/v/t1.15752-9/325530220_1256817174869334_5252709060396872628_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeGAgvujwzP44GyDsg6g7sj1yE7RvebLDJDITtG95ssMkOAAOE-cSrMLdfkxuyxUrP5-FR-4rFiUgrW0pcYpmxJ4&_nc_ohc=I25HG5wcTlEAX_JA1w7&_nc_ht=scontent.fdac13-1.fna&oh=03_AdR-QAfZfFMnwvdgp1iy2syZqNVpHlWGeWONvn_g-y-ZqQ&oe=63EE4EC8")
+          no-repeat;
+        background-size: cover;
+        height: 100vh;
+        position: relative;
+        width: 100%;
+        background-position: center center;
+      }
+      .second::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.745);
+      }
+      .third {
+        background: url("https://scontent.fdac13-1.fna.fbcdn.net/v/t1.15752-9/326098068_581595063782624_6440754984748525575_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFHAInmwwvwo0ZbqEcGXl6GwlzjfmzivQTCXON-bOK9BKY0Tt298OpBzD8yadRG8SwFutzXmSiUdCdk7hf4XrDt&_nc_ohc=T41LlU0r8gQAX-DH5iX&tn=jnzhKn0hBhm2WRaS&_nc_ht=scontent.fdac13-1.fna&oh=03_AdRNbpe7B6Ky4Dku73lAIlnbRrHfO-n_gdEU4kUe-aG0GQ&oe=63EE3995")
+          no-repeat;
+        background-size: cover;
+        height: 100vh;
+        position: relative;
+        width: 100%;
+        background-position: center 66%;
+        background-attachment: fixed;
+      }
+      .third::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.745);
+      }
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        text-align: center;
+        width: 60%;
+        margin: 0 auto;
+        z-index: 999 !important;
+        color: #ffff;
+        position: relative;
+      }
+      .content h1 {
+        font-size: 70px;
+        font-weight: 900;
+        letter-spacing: 9px;
+        margin: 20px 0;
+      }
+      .content h2 {
+        font-size: 60px;
+        letter-spacing: 13px;
+        font-weight: 400;
+      }
+      .content p {
+        font-size: 15px;
+        line-height: 30px;
+        letter-spacing: 1px;
+        font-weight: 300;
+      }
+      .content h2 {
+        margin: 0;
+      }
+      @media only screen and (max-width: 990px) {
+        .navbar-light .navbar-toggler {
+          color: rgb(255 255 255) !important;
+          border-color: rgb(255 255 255) !important;
+          text-align: center;
+        }
+        .content {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          flex-direction: column;
+          text-align: center;
+          width: 95%;
+          margin: 0 auto;
+          z-index: 999 !important;
+          color: #ffff;
+          position: relative;
+        }
+        button.navbar-toggler {
+          background: #fff !important;
+          text-align: center;
+        }
+        ul.navbar-nav.me-auto.mb-2.mb-lg-0 {
+          margin-left: auto;
+          text-align: center;
+        }
+        .d-flex {
+          display: flex !important;
+          justify-content: center;
+        }
+        .content h1 {
+          font-size: 40px;
+          font-weight: 900;
+          letter-spacing: inherit;
+          margin: 20px 0;
+        }
+        .content h2 {
+          font-size: 40px;
+          letter-spacing: 13px;
+          font-weight: 400;
+        }
+        .about {
+          height: 49vh !important;
+        }
+        .container.py-5.my-5 {
+          margin-bottom: 0;
+          padding: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <button type="submit">Call Me</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      id="carouselExampleFade"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="first">
+            <div class="content">
+              <h2>Hey !</h2>
+              <h1>This is Saymon</h1>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Suscipit, beatae assumenda doloremque adipisci laboriosam,
+                tempore reprehenderit asperiores qui in sed voluptatem velit
+                rerum vero, inventore aliquam. Nulla officia hic error.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="second">
+            <div class="content">
+              <h2>I am</h2>
+              <h1>A Web Designer</h1>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Suscipit, beatae assumenda doloremque adipisci laboriosam,
+                tempore reprehenderit asperiores qui in sed voluptatem velit
+                rerum vero, inventore aliquam. Nulla officia hic error.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="third">
+            <div class="content">
+              <h2>I am</h2>
+              <h1>A Professional Photographer</h1>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Suscipit, beatae assumenda doloremque adipisci laboriosam,
+                tempore reprehenderit asperiores qui in sed voluptatem velit
+                rerum vero, inventore aliquam. Nulla officia hic error.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="container py-5 my-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="about-img">
+            <img
+              class="w-100 height-100"
+              src="https://scontent.fdac13-1.fna.fbcdn.net/v/t1.15752-9/326098068_581595063782624_6440754984748525575_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFHAInmwwvwo0ZbqEcGXl6GwlzjfmzivQTCXON-bOK9BKY0Tt298OpBzD8yadRG8SwFutzXmSiUdCdk7hf4XrDt&_nc_ohc=T41LlU0r8gQAX-DH5iX&tn=jnzhKn0hBhm2WRaS&_nc_ht=scontent.fdac13-1.fna&oh=03_AdRNbpe7B6Ky4Dku73lAIlnbRrHfO-n_gdEU4kUe-aG0GQ&oe=63EE3995"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div
+            class="about"
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              height: 100vh;
+              text-align: center;
+            "
+          >
+            <h1>About Me</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita
+              repellat in excepturi perspiciatis. Vel id nam, culpa animi
+              ratione, modi magnam consectetur reprehenderit, fugit voluptatibus
+              quod corporis asperiores qui molestias.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-5 my-5x">
+      <h2 class="text-center">What I Do</h2>
+      <p class="text-center" style="line-height: 30px">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium
+        voluptatem quae voluptates incidunt aperiam. <br />
+        Sapiente earum inventore provident itaque ex!
+      </p>
+      <div class="row">
+        <div class="col-lg-4 mt-5">
+          <img
+            class="w-100 height-100 py-4"
+            src="https://scontent.fdac13-1.fna.fbcdn.net/v/t1.15752-9/326098068_581595063782624_6440754984748525575_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFHAInmwwvwo0ZbqEcGXl6GwlzjfmzivQTCXON-bOK9BKY0Tt298OpBzD8yadRG8SwFutzXmSiUdCdk7hf4XrDt&_nc_ohc=T41LlU0r8gQAX-DH5iX&tn=jnzhKn0hBhm2WRaS&_nc_ht=scontent.fdac13-1.fna&oh=03_AdRNbpe7B6Ky4Dku73lAIlnbRrHfO-n_gdEU4kUe-aG0GQ&oe=63EE3995"
+            alt=""
+          />
+          <h3 class="py-1">Photographer</h3>
+          <p>
+            I'm a Professional Photographer. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Voluptatibus, perferendis aut sed
+            deleniti omnis qui!
+          </p>
+        </div>
+        <div class="col-lg-4 mt-5 text-center">
+          <img
+            class="w-100 height-100 py-4"
+            style="object-fit: cover"
+            src="https://scontent.fdac13-1.fna.fbcdn.net/v/t1.15752-9/325888924_700024864840550_4161857480279872641_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeGsif-rYd8EQlRly2IANbPZJN560tjKz9Ik3nrS2MrP0nvRdxdNxyt7_HbOnTch06w8Yci1H_Qk47cZvsJVEaRX&_nc_ohc=sLjMYhP1a7EAX82i305&_nc_oc=AQlACoZQRfc2TWio2UBJASEo_vXzKabwdQh3YhUYC4clFOjKEOALXxgoSFdmLR-N7_s&tn=jnzhKn0hBhm2WRaS&_nc_ht=scontent.fdac13-1.fna&oh=03_AdQSL1nNBP3K671hA539yQlcSC9DdEB6Ff5E_k_cQJvb5Q&oe=63EE4730"
+            alt=""
+          />
+          <h3 class="py-1">Junior Cricketer</h3>
+          <p>
+            I'm a Junior Cricketer. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Voluptatibus, perferendis aut sed deleniti omnis
+            qui!
+          </p>
+        </div>
+        <div class="col-lg-4 mt-5">
+          <img
+            class="w-100 height-100 py-4"
+            src="https://scontent.fdac13-1.fna.fbcdn.net/v/t1.15752-9/325502908_842603930378155_6350079172072717945_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHvZdOGBs5UQhq1Kiz49M_XJqFqknZTW7EmoWqSdlNbschGlJUztPehuVYXxMCcf7iwtcHaOnJ45QskPqabSmt9&_nc_ohc=tslTz_y4WlUAX_jp6a3&_nc_ht=scontent.fdac13-1.fna&oh=03_AdTepyumfnhSn983xmxyHA3ddm0FnKkNBdOAG2_C9a81Dw&oe=63EE394A"
+            alt=""
+          />
+          <h3 class="py-1">Traveling</h3>
+          <p>
+            I love traveling. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Voluptatibus, perferendis aut sed deleniti omnis qui!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-5 bg-dark text-center text-white py-3">
+      <p style="font-size: 13px">all right reserved By Saymon @2023</p>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
